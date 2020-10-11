@@ -16,7 +16,6 @@ public class TestQ1_2_c {
             String[] common_query = {"information", "retrieval"};
             List<ResultClass> ans13c = objQueryEngine.runQ13c(common_query);
             String[] doc_names_q13c = {"Doc1" };
-            assertNotNull(doc_names_q13c);
             int counter3 = 0;
             assertEquals(1, ans13c.size());
             for (ResultClass docs : ans13c) {

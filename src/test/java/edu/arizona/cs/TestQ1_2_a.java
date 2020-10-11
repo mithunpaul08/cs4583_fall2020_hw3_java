@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class TestQ13a {
+public class TestQ1_2_a {
 
     @Test
     public void testDocsAndScores() {
 
         String inputFileFullPath="input.txt";
 
-        QueryEngine objQueryEngine = new QueryEngine(inputFileFullPath); // not here
+        QueryEngine objQueryEngine = new QueryEngine(inputFileFullPath);
         try {
 
             String[] common_query = {"information", "retrieval"};

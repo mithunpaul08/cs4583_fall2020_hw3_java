@@ -16,6 +16,7 @@ public class TestQ13b {
         try {
             String[] common_query = {"information", "retrieval"};
             List<ResultClass> ans13b = objQueryEngine.runQ13b(common_query);
+            assertNotNull(ans13b);
             assertEquals(ans13b.size(), 0);
         } catch (java.io.FileNotFoundException ex) {
             System.out.println(ex.getMessage());

@@ -94,6 +94,8 @@ If your test cases are failing, you will get an error message like this.
 click on the link which says `details` and find out what is causing the issue or which test case is not passing. Once you have identified that, close the pull request, fix the errors, and raise another pull request.
 **Do not merge the pull request.**
 
+Also note that if you change your code after raising a pull request, the changes will be automatically taken up by the pull request and hence will reflect in your travis test cases passing or not. 
+
 Your instructor will grade the code off this pull request. 
 Pull requests submitted after the deadline won’t be considered.
 If you have raised a pull request, then you don't have to submit the code in D2l.

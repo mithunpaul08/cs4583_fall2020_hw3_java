@@ -1,11 +1,13 @@
 package edu.arizona.cs;
 
-import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class TestQ1 {
+public class TestQ1_3 {
 
     @Test
     public void testDocsAndScores() {

@@ -27,14 +27,14 @@ just created. Your command must be similar to :
 
 # Write your code
 
-You will implement one function each for each of the 4 qns, Eg:`runQ5_1()` inside 
-the class `InvertedIndex`. These functions should return the documents as asked in the question, as a String array. 
+You will implement one function each for each of the programming sub qns, Eg:`runQ1_1()` inside 
+the class `QueryEngine`. These functions should return the documents as asked in the question as a List of `ResultClass`. 
 
 Also, you **should not edit** these files:
 - `.travis.yml`
-- `src/main/resources/Docs.txt`
-- `src/test/java/edu/arizona/cs/TestQ7_hw2.java`
-- `src/main/java/edu/arizona/cs/Document.java`
+- `src/main/resources/*.txt`
+- `src/test/java/edu/arizona/cs/*.java`
+- `src/main/java/edu/arizona/cs/ResultClass.java`
 
 
 
@@ -75,7 +75,7 @@ repository on GitHub.
 
 To submit your assignment,
 [create a pull request on GitHub](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request).
-where the "base" branch is "master", and the "compare" branch is the branch you
+where the "base" branch is "main", and the "compare" branch is the branch you
 created at the beginning of this assignment.
 Then go to the "Files changed" tab, and make sure that all your changes look as you would expect them
 to.
@@ -94,12 +94,12 @@ If your test cases are failing, you will get an error message like this.
 click on the link which says `details` and find out what is causing the issue or which test case is not passing. Once you have identified that, close the pull request, fix the errors, and raise another pull request.
 **Do not merge the pull request.**
 
-Also note that if you change your code after raising a pull request, the changes will be automatically taken up by the pull request and hence will reflect in your travis test cases passing or not. 
+Also note that if you change your code after raising a pull request, the changes will be automatically reflected in the pull request and hence in your travis test cases passing or not. 
 
 Your instructor will grade the code off this pull request. 
 Pull requests submitted after the deadline won’t be considered.
 If you have raised a pull request, then you don't have to submit the code in D2l.
-However do note that you still have to submit the answers to the other written questions in D2l. If there are anything in particular you want us to keep in mind while grading (written or programming part) create a readme.txt and include it in your zip file uploaded to D2l.
+However do note that you still have to submit the answers to the other written questions in D2l. 
 # Grading
 
 

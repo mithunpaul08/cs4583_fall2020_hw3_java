@@ -11,15 +11,15 @@ public class TestQ1_2_c {
 
         String inputFileFullPath="input.txt";
 
-        QueryEngine objQueryEngine = new QueryEngine(inputFileFullPath); // not here
+        QueryEngine objQueryEngine = new QueryEngine(inputFileFullPath);
         try {
             String[] common_query = {"information", "retrieval"};
-            List<ResultClass> ans13c = objQueryEngine.runQ13c(common_query);
-            String[] doc_names_q13c = {"Doc1" };
+            List<ResultClass> ans1_2_c = objQueryEngine.runQ1_2_c(common_query);
+            String[] doc_names_q1_2_c = {"Doc1"};
             int counter3 = 0;
-            assertEquals(1, ans13c.size());
-            for (ResultClass docs : ans13c) {
-                assertEquals(doc_names_q13c[counter3], docs.DocName.get("docid"));
+            assertEquals(1, ans1_2_c.size());
+            for (ResultClass docs : ans1_2_c) {
+                assertEquals(doc_names_q1_2_c[counter3], docs.DocName.get("docid"));
                 counter3 = counter3 + 1;
             }
         }

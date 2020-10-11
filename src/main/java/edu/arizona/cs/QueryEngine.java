@@ -41,52 +41,59 @@ public class QueryEngine {
             System.out.println("********Welcome to  Homework 3!");
             String[] query13a = {"information", "retrieval"};
             QueryEngine objQueryEngine = new QueryEngine(fileName);
-            List<ResultClass> ans2 = objQueryEngine.runQ13a(query13a);
         }
         catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
-    public List<ResultClass> runQ1(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
-
+    public List<ResultClass> runQ1_1(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
         if(!indexExists) {
             buildIndex();
         }
-        StringBuilder result = new StringBuilder("");
         List<ResultClass>  ans=new ArrayList<ResultClass>();
         ans =returnDummyResults(2);
         return ans;
     }
 
-    public List<ResultClass> runQ13a(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
+    public List<ResultClass> runQ1_2_a(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
         if(!indexExists) {
             buildIndex();
         }
-        StringBuilder result = new StringBuilder("");
         List<ResultClass>  ans=new ArrayList<ResultClass>();
         ans =returnDummyResults(2);
         return ans;
     }
 
-    public List<ResultClass> runQ13b(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
+    public List<ResultClass> runQ1_2_b(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
         if(!indexExists) {
             buildIndex();
         }
-        StringBuilder result = new StringBuilder("");
         List<ResultClass>  ans=new ArrayList<ResultClass>();
+        ans =returnDummyResults(0);
         return ans;
     }
 
-    public List<ResultClass> runQ13c(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
+    public List<ResultClass> runQ1_2_c(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
         if(!indexExists) {
             buildIndex();
         }
-        StringBuilder result = new StringBuilder("");
         List<ResultClass>  ans=new ArrayList<ResultClass>();
         ans =returnDummyResults(1);
         return ans;
     }
+
+    public List<ResultClass> runQ1_3(String[] query) throws java.io.FileNotFoundException,java.io.IOException {
+
+        if(!indexExists) {
+            buildIndex();
+        }
+        StringBuilder result = new StringBuilder("");
+        List<ResultClass>  ans=new ArrayList<ResultClass>();
+        ans =returnDummyResults(2);
+        return ans;
+    }
+
 
     private  List<ResultClass> returnDummyResults(int maxNoOfDocs) {
 

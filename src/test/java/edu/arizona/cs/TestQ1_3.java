@@ -15,7 +15,7 @@ public class TestQ1_3 {
         QueryEngine objQueryEngine = new QueryEngine(inputFileFullPath);
         try {
             String[] common_query = {"information", "retrieval"};
-            List<ResultClass> ans1 = objQueryEngine.runQ1(common_query);
+            List<ResultClass> ans1 = objQueryEngine.runQ1_3(common_query);
             String[] doc_names_q1 = {"Doc1", "Doc2"};
             int counter1 = 0;
             assertEquals((doc_names_q1.length) , ans1.size());

@@ -5,10 +5,8 @@ you expect to use for this assignment.
 Minimally, you should install:
 
 * [git](https://git-scm.com/downloads)
-* [Java (version oraclejdk8 or higher)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html/)
-* [Lucene](http://lucene.apache.org/)
+* [Java](https://www.java.com/en/)(8 or higher)
 * [Maven](https://maven.apache.org/)
-* [Surefire](https://maven.apache.org/surefire/maven-surefire-plugin/)
 
 # Check out a new branch
 
@@ -16,67 +14,58 @@ Before you start editing any code, you will need to create a new branch in your
 GitHub repository to hold your work.
 
 1. Go to the repository that GitHub Classroom created for you. You should have received an email/link and you are most probably reading this there. It should look like
-`https://github.com/cs4583spring2019/cs-<your-username>`, where
+`https://github.com/cs4583_fall2020_hw*_java/cs-<your-username>`, where
 `<your-username>` is your GitHub username. 
 [Create a branch through the GitHub interface](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
 2. Name your `<branch>` as `lastname_firstname_dev`
 2. Clone the repository to your local machine and checkout the branch you
 just created. Your command must be similar to :
    ```
-   git clone -b <branch> https://github.com/cs4583spring2019/cs-<your-username>.git
+   git clone -b <branch> https://github.com/cs4583_fall2020_hw*_java/cs-<your-username>.git
+   git checkout lastname_firstname_dev
    ```
 
 # Write your code
 
-You will implement one function each for each of the 4 qns, Eg:`runQ13a()` inside 
-the class `QueryEngine`. These functions should return the documents in the right order (atleast the top 2) , as asked in the question, as Lucene Documents. 
-A sample return function is also provided for your reference. 
+You will implement one function each for each of the 4 qns, Eg:`runQ5_1()` inside 
+the class `InvertedIndex`. These functions should return the documents as asked in the question, as a String array. 
 
 Also, you **should not edit** these files:
-- `runAllTests.sh`
 - `.travis.yml`
-- `src/test/resources/input.txt`
-- `src/test/java/edu/arizona/cs/LuceneTest.java`
-
-**Note: The file `src/test/resources/input.txt` is the input file you must use (or would have started using) as per hw3 guidelines. Please don't edit it.**
-
-Also don’t modify the signature of the query engine function or the
-functions that start with `runq1*`:
-
-Eg:
-`public QueryEngine(String inputFileFullPath)`
-
-`public List<ResultClass> runQ13a(String[] query) throws java.io.FileNotFoundException,java.io.IOException `
+- `src/main/resources/Docs.txt`
+- `src/test/java/edu/arizona/cs/TestQ7_hw2.java`
+- `src/main/java/edu/arizona/cs/Document.java`
 
 
-### TL;DR: If you have already started coding, your code should have ideally been returning Lucene documents as results. Now all you have to do is return your results via the respective `runQ1*` class.
 
 # Test your code
 
-Tests have been provided for you in the `src/test/java/edu/arizona/cs/LuceneTest.java` file.
-To run all the provided tests, run the ``mvn test`` script from the directory containing `pom.xml`
+Tests have been provided for you in the `src/test/java/edu/arizona/cs/Test_*.java` file.
+To run all the provided tests, run the ``mvn test`` script from the top project directory which contains a file named `pom.xml`
 
-If your code passes the test case, you will see output like:
+If your code passes the test case, you will see an output similar to:
 ```
-INFO] -------------------------------------------------------
+[INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running edu.arizona.cs.LuceneTest
-value of doc score is0.0
-value of doc score is0.0
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in edu.arizona.cs.LuceneTest
-[INFO]
+[INFO] Running edu.arizona.cs.TestQ5
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in edu.arizona.cs.TestQ5
+[INFO] 
 [INFO] Results:
-[INFO]
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.486 s
-[INFO] Finished at: 2019-03-06T16:21:49-07:00
+[INFO] Total time:  4.037 s
+[INFO] Finished at: 2020-08-23T15:06:13-07:00
+[INFO] ------------------------------------------------------------------------
 
 ```
+
+
+Note: doing `mvn clean` from time to time is a good habit
 
 # Submit your code
 
@@ -96,17 +85,26 @@ These are the same as `mvn test`.
 So if your code passed `mvn test` in your machine, 
 it’s highly likely that it will pass in github. Nevertheless 
 you should make sure that you see a green tick mark or a message 
-saying “All Checks Have Passed”. Else close the pull request, fix the errors, and raise another pull request.
+saying “All Checks Have Passed”,
+![like this:](travis.png)
+
+If your test cases are failing, you will get an error message like this.
+![like this:](travis_fail.png)
+
+click on the link which says `details` and find out what is causing the issue or which test case is not passing. Once you have identified that, close the pull request, fix the errors, and raise another pull request.
 **Do not merge the pull request.**
 
-Your instructor will grade the code of this pull request. 
+Your instructor will grade the code off this pull request. 
 Pull requests submitted after the deadline won’t be considered.
-
+If you have raised a pull request, then you don't have to submit the code in D2l.
+However do note that you still have to submit the answers to the other written questions in D2l. If there are anything in particular you want us to keep in mind while grading (written or programming part) create a readme.txt and include it in your zip file uploaded to D2l.
 # Grading
 
-Qn1 of this assignment will be graded primarily on their ability to pass the tests that
+
+The programming question of this assignment will be graded primarily on their ability to pass the tests that
 have been provided to you on github after the pull request.
-Assignments that pass all, and with the corresponding code implementing the correct logic, will receive at least 90% of the
+Assignments that pass all, and with the corresponding code implementing the correct logic, will receive at least 95% of the
 possible points.
 
-To get the remaining of the points, the scores you return for all the documents will be checked.
+To get the remaining of the points, your code will be checked for things like readability and code quality.
+***Please note that this time on there will be a penalty for not following all instructions. Especially `do not merge the pull request`.***

@@ -52,7 +52,7 @@ public class QueryEngine {
             buildIndex();
         }
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(2);
+        ans =returnDummyResults(3);
         return ans;
     }
 

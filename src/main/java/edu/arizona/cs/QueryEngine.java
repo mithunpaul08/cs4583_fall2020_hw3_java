@@ -52,7 +52,7 @@ public class QueryEngine {
             buildIndex();
         }
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(2);
+        ans =returnDummyResults(3);
         return ans;
     }
 
@@ -61,7 +61,7 @@ public class QueryEngine {
             buildIndex();
         }
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(2);
+        ans =returnDummyResults(3);
         return ans;
     }
 
@@ -70,7 +70,7 @@ public class QueryEngine {
             buildIndex();
         }
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(0);
+        ans =returnDummyResults(1);
         return ans;
     }
 
@@ -79,7 +79,7 @@ public class QueryEngine {
             buildIndex();
         }
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(1);
+        ans =returnDummyResults(2);
         return ans;
     }
 
@@ -90,7 +90,7 @@ public class QueryEngine {
         }
         StringBuilder result = new StringBuilder("");
         List<ResultClass>  ans=new ArrayList<ResultClass>();
-        ans =returnDummyResults(2);
+        ans =returnDummyResults(4);
         return ans;
     }
 
